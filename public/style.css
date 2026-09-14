@@ -220,13 +220,3 @@ footer {
   display: flex;
   justify-content: center;
 }
-
-footer a,
-footer a:visited {
-  color: var(--link-color);
-}
-
-footer a:hover,
-footer a:focus {
-  color: var(--link-color-hover);
-}
