@@ -354,3 +354,117 @@ main h6 {
 .two-columns > *:last-child {
   padding-left: 0.75em;
 }
+
+
+/* -------------------------------------------------------- */
+/* CONTENT IMAGES */
+/* -------------------------------------------------------- */
+
+.image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.full-width-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.images {
+  display: flex;
+  width: calc(100% + 5px + 5px);
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+/* -------------------------------------------------------- */
+/* ACCESSIBILITY */
+/* -------------------------------------------------------- */
+
+/* please do not remove this. */
+
+#skip-to-content-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  line-height: 1;
+  font-size: 1.25rem;
+  background-color: var(--content-background-color);
+  color: var(--text-color);
+  transform: translateY(-3rem);
+  transition: transform 0.1s ease-in;
+  z-index: 99999999999;
+}
+
+#skip-to-content-link:focus,
+#skip-to-content-link:focus-within {
+  transform: translateY(0);
+}
+
+
+/* -------------------------------------------------------- */
+/* MOBILE RESPONSIVE */
+/* -------------------------------------------------------- */
+
+/* CSS Code for devices < 800px */
+@media (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+
+  .layout {
+    width: 100%;
+    grid-template: "header" auto "main" auto "leftSidebar" auto "rightSidebar" auto "footer" auto / 1fr;
+    /* Confused by the grid? Check out my tutorial: https://petrapixel.neocities.org/coding/positioning-tutorial#grid */
+  }
+
+  aside {
+    border-bottom: 1px solid;
+    padding: 9px;
+    font-size: 0.9em;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  nav > ul {
+    padding-top: 0.5em;
+  }
+
+  nav > ul li > a,
+  nav > ul li > details summary,
+  nav > ul li > strong {
+    padding: 0.5em;
+  }
+
+  main {
+    max-height: none;
+    padding: 15px;
+  }
+
+  .images {
+    flex-wrap: wrap;
+  }
+
+  .images img {
+    width: 100%;
+  }
+
+  #skip-to-content-link {
+    font-size: 1rem;
+  }
