@@ -203,3 +203,30 @@ aside {
   font-family: monospace;
   font-size: 0.7em;
 }
+
+
+/* -------------------------------------------------------- */
+/* FOOTER */
+/* -------------------------------------------------------- */
+
+footer {
+  grid-area: footer;
+  border: var(--border);
+  border-radius: var(--round-borders);
+  overflow: hidden;
+  font-size: 0.75em;
+  padding: 15px;
+  background: var(--content-background-color);
+  display: flex;
+  justify-content: center;
+}
+
+footer a,
+footer a:visited {
+  color: var(--link-color);
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--link-color-hover);
+}
