@@ -81,3 +81,26 @@ a:focus {
   color: var(--link-color-hover);
   text-decoration: none;
 }
+
+/* -------------------------------------------------------- */
+/* LAYOUT */
+/* -------------------------------------------------------- */
+
+.layout {
+  width: 1000px;
+  display: grid;
+  grid-gap: var(--margin);
+  grid-template: "header header header" auto "leftSidebar main rightSidebar" auto "footer footer footer" auto / var(
+      --sidebar-width
+    ) auto var(--sidebar-width);
+  /* Confused by the grid? Check out my tutorial: https://petrapixel.neocities.org/coding/positioning-tutorial#grid */
+}
+
+main {
+  grid-area: main;
+  overflow-y: auto;
+  padding: var(--padding);
+  background: var(--content-background-color);
+  border: var(--border);
+  border-radius: var(--round-borders);
+}
