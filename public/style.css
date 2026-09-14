@@ -104,3 +104,102 @@ main {
   border: var(--border);
   border-radius: var(--round-borders);
 }
+
+/* -------------------------------------------------------- */
+/* HEADER */
+/* -------------------------------------------------------- */
+
+header {
+  grid-area: header;
+  font-size: 1.2em;
+  border: var(--border);
+  border-radius: var(--round-borders);
+  background: var(--content-background-color);
+}
+
+.header-content {
+  padding: var(--padding);
+}
+
+.header-title {
+  font-family: var(--heading-font);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.header-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* -------------------------------------------------------- */
+/* SIDEBARS */
+/* -------------------------------------------------------- */
+
+aside {
+  grid-area: aside;
+  border: var(--border);
+  border-radius: var(--round-borders);
+  overflow: hidden;
+  background: var(--sidebar-background-color);
+  padding: var(--padding);
+  color: var(--sidebar-text-color);
+}
+
+.left-sidebar {
+  grid-area: leftSidebar;
+}
+
+.right-sidebar {
+  grid-area: rightSidebar;
+}
+
+.sidebar-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family: var(--heading-font);
+}
+
+.sidebar-section:not(:last-child) {
+  margin-bottom: 3em;
+}
+
+.sidebar-section ul,
+.sidebar-section ol {
+  padding-left: 1.5em;
+}
+
+.sidebar-section > *:not(p):not(ul):not(ol):not(blockquote) {
+  margin-top: 10px;
+}
+
+/* Sidebar Blockquote: */
+
+.sidebar-section blockquote {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 1em 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sidebar-section blockquote > *:first-child {
+  margin-top: 0;
+}
+
+.sidebar-section blockquote > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Site Button: */
+
+.site-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-button textarea {
+  font-family: monospace;
+  font-size: 0.7em;
+}
