@@ -1,87 +1,84 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Portfolio Website</title>
+    <title>Velvet Hollow</title>
 
-    <!-- Change your site description: (It is shown in Google results) -->
+    <!-- Site description -->
     <meta content="My personal website!" name="description" />
 
     <!-- Setting character encoding and viewport size. Do not remove. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- FavIcon (small image in tab), change to any image you want: -->
+    <!-- FavIcon (small image in tab) -->
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
-
     <link href="style.css" rel="stylesheet" />
-  </head>
+    </head>
 
   <body>
-    <!-- The next line is a skip-to-content link for keyboard users. Do not remove it! -->
-    <a href="#content" id="skip-to-content-link">Skip to content</a>
-
-    <div class="layout">
-      <!-- =============================================== -->
+    <div class="site-layout-grid">
       <!-- HEADER -->
-      <!-- =============================================== -->
-
       <header>
-        <div class="header-content">
-          <div class="header-title">Welcome to My Portfolio</div>
+        <div class="header-heading">
+          <div class="header-title">Velvet Hollow</div>
         </div>
       </header>
 
-      <!-- =============================================== -->
       <!-- LEFT SIDEBAR -->
-      <!-- =============================================== -->
-
-      <aside class="left-sidebar">
-        <!-- NAVIGATION -->
-        <nav>
-          <div class="sidebar-title">Menu</div>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <!--<li><a href="/page1">Page 1</a></li>-->
-            <!--<li><a href="/page2">Page 2</a></li>-->
-            <!--<li><a href="/page3">Page 3</a></li>-->
-          </ul>
-        </nav>
+      <aside class="left-sidebar" data-nosnippet="true">
+          <div class="sidebar-content">
+            <div class="sidebar-section-title">Left Sidebar</div>
+              <div class="sidebar-links">
+              <nav>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </details>
       </aside>
 
-      <!-- =============================================== -->
-      <!-- RIGHT SIDEBAR -->
-      <!-- =============================================== -->
-
-      <aside class="right-sidebar">
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section 1</div>
-          <p>work in progress...</p>
+      <!-- MAIN CONTENT -->
+      <main class="main">
+        <div class="main-content">
+          <div class="main-content-title">Main Content</div>
+          <div class="about-me">
+            <p>
+              Welome to Velvet Hollow! This will be my personal portfolio website for displaying my projects and ways to contact me.
+            </p>
+            <p>
+              It is not finished yet, obviously
+            </p>
+          </div>
         </div>
-
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section 2</div>
-          <p>work in progress...</p>
-        </div>
-
-        <div class="sidebar-section">
-          <div class="sidebar-title">Section 3</div>
-          <p>work in progress...</p>
-        </div>
-      </aside>
-
-      <main id="content"><!-- Do NOT remove the ID here -->
-        <p>Welcome to my portfolio!</p>
       </main>
 
-      <!-- =============================================== -->
+      <!-- RIGHT SIDEBAR -->
+      <aside class="right-sidebar" data-nosnippet="true">
+        <div class="sidebar-section-title">Right Sidebar</div>
+      </aside>
+
       <!-- FOOTER -->
-      <!-- =============================================== -->
-
       <footer>
-        <div>thanks for being here</div>
+        <div class="footer-title"></div>
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="footer-links">
+              <a href="#">scroll to top</a>
+              <a href="#">github</a>
+              <a href="#">linkedin</a>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-item">
+              <p>© 2024 Mandie</p>
+            </div>
+          </div>
+        </div>
       </footer>
-
-      <!-- Closing .layout: -->
     </div>
 
     <script src="script.js"></script>
