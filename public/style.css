@@ -87,7 +87,6 @@ a:focus {
 /* -------------------------------------------------------- */
 
 .layout {
-  width: 1000px;
   display: grid;
   grid-gap: var(--margin);
   grid-template: "header header header" auto "leftSidebar main rightSidebar" auto "footer footer footer" auto / var(
