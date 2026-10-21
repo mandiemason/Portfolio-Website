@@ -34,8 +34,10 @@
 /*GRID LAYOUT*/
 .site-layout-grid {
   display: grid;
+  width: 100%;
+  max-width: 1200px;
   gap: 0.01rem;
-  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 6fr) minmax(0, 1.5fr);
   grid-template-rows: auto minmax(auto, 1fr) auto;
   grid-template-areas:
     "header header header"
@@ -47,7 +49,11 @@
 @media only screen and (max-width: 768px) {
   .site-layout-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows:
+      minmax(auto, auto)
+      auto
+      minmax(auto, 1fr)
+      minmax(auto, auto);
     grid-template-areas:
       "header"
       "left-sidebar"
@@ -70,18 +76,20 @@ body {
   justify-content: center;
   min-height: 100vh;
   background-color: var(--bodyBackgroundColor);
-  background-image: url("/public/images/pink-floral.png");
-  padding: 0;
+  background-image: url("/public/images/halloween_background.jpg");
+  padding: 2rem;
   margin: 0;
 }
 
 /* HEADER STYLING */
 header {
+  display: block;
   background-color: var(--headerFooterBackgroundColor);
   grid-area: header;
   border: var(--mainBorder);
   border-bottom: none;
   border-radius: 1rem 1rem 0 0;
+  position: relative;
 }
 
 .header-heading {
@@ -91,28 +99,36 @@ header {
   padding: 1rem;
 }
 
+.header-logo img{
+
+}
+
+
 /* SIDEBAR STYLING */
+.sidebar-section-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* left sidebar */
 .left-sidebar {
   background-color: var(--asideBackgroundColor);
   color: var(--asideTextColor);
   padding: 1rem;
   grid-area: left-sidebar;
   border: var(--mainBorder);
-  /* border-bottom: none;
-  border-right: none; */
 }
 
-.right-sidebar {
-  border-bottom: none;
-  border-left: none;
+.sidebar-links ul {
+  display: block;
+  list-style: circle;
+  margin: 0;
+  padding: 5px;
 }
 
-.sidebar-section-title {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.sidebar-links a {
+.sidebar-links li a {
+  display: block;
+  padding: 5px;
   color: var(--linkColor);
 }
 
@@ -120,26 +136,37 @@ header {
   color: var(--linkHoverColor);
 }
 
+/* right sidebar */
+.right-sidebar {
+  border-bottom: none;
+  border-left: none;
+}
+
 /* MAIN CONTENT STYLING */
 main {
   background-color: var(--mainBackgroundColor);
   color: var(--mainTextColor);
   padding: 1rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
   grid-area: main;
   border: var(--mainBorder);
   border-left: none;
   border-right: none;
 }
 
-.about-me {
+.main-content p {
   background-color: var(--veryLight);
   color: var(--mainTextColor);
   padding: 1rem;
   margin-top: 1rem;
   line-height: 1.5;
-
   border-radius: 1rem 1rem 1rem 1rem;
   border: var(--secondaryBorder);
+}
+
+.p1 {
+  font-weight: bold;
 }
 
 .right-sidebar {
@@ -184,3 +211,5 @@ footer {
   align-items: center;
   float: right;
 }
+
+
